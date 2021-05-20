@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	
+	 <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+	-->
+	<title>Resume Generator</title>
+	
+	
+	<link rel="stylesheet" href="style.css">
+	
+	
+  </head>
+  <body>
+  
+  <div class="container-fluid" id="cv_form">
+    <h1 class="text-center my-2">Resume Generator</h1>
+	<p class="text-center my-2">by Ammar Naeem</p>
+	
+	<div class="row">
+	
+	<!--1st columne-->
+	<div class="col-md-6">
+	
+	<h3>Personal Information</h3>
+	
+	<div class="form-group">
+	<lable for="name">Your Name</label>
+	<input class="form-control" type="text" placeholder="Enter Your Name" id="name">
+	</div>
+	
+	<div class="form-group mt-2">
+	<lable for="call">Phone No</label>
+	<input class="form-control" type="number" placeholder="Enter Your Contact NO" id="call">
+	</div>
+	
+	<div class="form-group mt-2">
+	<lable for="add">Address</label>
+	<textarea class="form-control" placeholder="Enter Your Contact NO" id="add"></textarea>
+	</div>
+
+
+	<div class="form-group mt-3">
+		<label for="proimg">select your profile</label>
+		<input type="file" id="proimg" class="form-control">
+
+	</div>
+	
+	<p class="text-secondary my-2">Important Links</p>
+	
+	<div class="form-group mt-2">
+	<lable for="fb">Facebook</label>
+	<input class="form-control" type="text" placeholder="Enter Link Here" id="fb">
+	</div>
+	
+	<div class="form-group mt-2">
+	<lable for="git">github</label>
+	<input class="form-control" type="text" placeholder="Enter Link Here" id="git">
+	</div>
+	
+	<div class="form-group mt-2">
+	<lable for="in">LinkedIn</label>
+	<input class="form-control" type="text" placeholder="Enter Link Here" id="in">
+	</div>
+	
+	
+	</div>
+	                                 <!--2nd columne-->
+	<div class="col-md-6">
+	
+	<h3>Professional Information</h3>
+	
+	<div class="form-group mt-2">
+	<lable for="obj">Objective</label>
+	<textarea class="form-control" placeholder="Enter Your objective" rows="3" id="obj"></textarea>
+	</div>
+	
+
+	<div class="form-group mt-2" id="we">
+	<lable for="wexp">Work Experience</label>
+	<textarea class="form-control wexpp" placeholder="Enter Your Work Experience Here " rows="3" id="wexp"></textarea>
+	
+	   <div class="container text-center mt-3" id="wexpaddbtn">
+	     <button class="btn btn-primary btn-block" onclick="addworkexp()">Add</button>
+	   </div>
+	 </div>  
+	   
+	   
+	   <div class="form-group mt-2" id="st">
+	<lable for="study">Academic Qualification</label>
+	<textarea class="form-control aq" placeholder="Enter Your Work Experience Here " id="study" rows="3"></textarea>
+	
+	   <div class="container text-center" id="studyaddbtn">
+	     <button class="btn btn-primary btn-block mt-3" onclick="addstudy()">Add</button>
+	   </div>
+	 </div>
+	
+	
+	
+	
+	
+	</div>
+	
+	
+	<div class="container text-center mt-3" id="studyadd">
+	     <button class="btn btn-primary btn-block mt-3" onclick="generatecv()">Generate CV</button>
+	   </div>
+	
+  </div>
+  </div>
+  
+  
+                                          <!--CV-->
+										  
+  
+  <div class="container-fluid " id="cv_template">
+  <div class="row">
+  <!--1st col-->
+<div class="col-md-4 text-center bkg">
+<img src="pro.jpg" class="img-fluid pic my-3" id="cvpro">
+<h3 id="namet">Ammar Naeem</h3>
+<p id="contactt">+923044220859</p>
+<p id="addt">Palistan,Iqbal Park</p>
+
+<hr/>
+
+<p><a id="gitt" href="" >https://github.com/amarnaeem</a></p>
+<p><a id="fbt" href="" >facebook.com/ammar.jutt.587/</a></p>
+<p><a id="int" href="" >linkedin.com/in/ammar-naeem-22442320b</a></p>
+
+
+
+
+</div>  
+    <!--2nd col-->
+<div class="col-md-8"> 
+  <h1 id="namet2"  class="text-center mt-3" style="font-weight:980;">Ammar Naeem</h1>
+  
+  
+  <!--card for Objective-->
+    <div class="card mt-4">
+       <div class="card-header bkg"><h3>Objectives</h3></div>
+       <div class="card-body">
+	   <p id="objt">Seeking a position at XYZ Company where I can maximize my 10+ years of management, quality assurance, program development, and training experience.Seeking a position as a clinical practice assistant for a health maintenance organization, utilizing my award-winning writing, research, and leadership skills.</p>
+	   </div>
+     </div>
+	 
+	 <!--card for Work Experience -->
+	 <div class="card mt-4">
+       <div class="card-header bkg"><h3>Work Experience</h3></div>
+       <div class="card-body">
+	   <ul id="wexpt">
+	   <li> 3 year workes as Home Tutor</li>
+	   <li> 6 months work in call center</li>
+	   </ul>
+	   </div>
+     </div>
+	 
+	 <!--card for qualification-->
+	  <div class="card mt-4">
+       <div class="card-header bkg"><h3>Avademic Qualification</h3></div>
+       <div class="card-body">
+	   <ul id="studyt">
+	   <li>3 year workes as Home Tutor</li>
+	   <li>6 months work in call center</li>
+	   </ul>
+	   </div>
+     </div>
+	 
+	 
+	 <div class="container mt-5 text-center ">
+	 
+	 <button onclick="PrintCv()" class="bkg">Print CV</button>
+	 </div>
+	 
+  </div> 
+</div>  
+	    
+	   </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+  <script src="script.js"></script>
+  </body>
+</html>

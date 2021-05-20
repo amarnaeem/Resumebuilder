@@ -1,0 +1,19 @@
+
+
+#cv_template
+{
+	display:none;
+}
+.pic
+{
+	border:2px solid black;
+	width:200px;
+	border-radius:50%;
+}
+
+.bkg
+{
+	background:#6ab04c;
+	
+}
+
